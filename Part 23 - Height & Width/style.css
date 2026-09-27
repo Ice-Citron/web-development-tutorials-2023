@@ -1,0 +1,79 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+.box {
+    background-color: antiquewhite;
+    border: 2px solid;
+    padding: 25px;
+    height: auto;
+    width: 200px; /* When width: 100px, the 2 blocks will be right on top of each other, this is because divs are block level element, meaning      
+                     they take up the whole line. */
+    float: right;
+    text-align: center;
+
+    min-width: 25%;
+    min-height: 50%;
+    /* max-width: 30%; */
+    /* min-height: 30%; */
+    /* max-height: 30%; */
+}
+
+/*
+    In the provided HTML and CSS code, you're creating a web page with a container div that contains two box divs, each with a heading and a paragraph of text. The CSS rules you've shared, particularly those related to min-width, min-height, max-width, and max-height, control how these elements size themselves. Here's how these properties work:
+
+    Min-width and Min-height
+        -- min-width: 25%;: This rule ensures that the .box elements will never be narrower than 25% of their containing element's width. No matter how small the viewport or container gets, the .box width will not go below this percentage.
+        -- min-height: 50%;: Similarly, this sets the minimum height of .box elements to 50% of their containing element's height. The content will always have at least this much height, ensuring that it doesn't become too squished vertically.
+        // These minimum size constraints are particularly useful in responsive design, where you want to ensure usability and readability across different device sizes.
+
+    Max-width and Max-height (Commented Out in Your Code)
+        -- max-width: 30%; (if uncommented): This would limit the .box width to a maximum of 30% of the width of its container. If the container or viewport widens, the .box will expand but only up to this limit. Beyond this point, it will not grow any wider.
+        -- max-height: 30%; (if uncommented): This rule would cap the height of the .box elements to no more than 30% of the height of their container. It prevents the .box from becoming too tall, regardless of the content inside it or how much the container's height increases.
+    
+    How They Work Together
+        // The combination of these properties provides a range of control over the sizing of elements:
+        -- The min-width and min-height properties ensure that elements don't shrink too much, maintaining their usability and readability.
+        -- The max-width and max-height properties prevent elements from growing too large, which could disrupt your layout or make content unwieldy.
+
+    -- In responsive design, these properties are invaluable for creating flexible layouts that adjust smoothly to various screen sizes and orientations. They help maintain the aesthetics and functionality of your design across different devices, ensuring a consistent user experience.
+
+    -- In the context of your code, these properties ensure that the .box divs adapt within the container, maintaining their aspect ratio and positioning according to the viewport size, but always within the constraints you've defined. This ensures that your layout remains as intended, regardless of the screen size or device.
+
+
+
+
+    box-sizing
+        // The box-sizing CSS property is used to alter the default CSS box model used to calculate widths and heights of elements. There are two main values:
+        -- content-box (the default): With this setting, the width and height properties include only the content of the box, not the padding, border, or margin. If you set an element to be 100px wide and then add 20px of padding, the actual width of the element becomes 140px (100px content + 20px padding left + 20px padding right).
+        -- border-box: This setting makes the width and height properties include the content, padding, and border, but not the margin. If you set an element to be 100px wide, that 100px will include both the width of the content and the padding and border, making it easier to size elements.
+
+    *{}
+        // The asterisk (*) is known as the universal selector in CSS. It matches every single element in the document. When you use * { ... }, you're applying the specified styles to every element on the page. For example:
+
+            * {
+                box-sizing: border-box;
+            }
+
+        // This sets the box-sizing property to border-box for all elements, which can simplify layout designs since you don't have to perform additional calculations for padding and borders when setting an element's width and height.
+
+    padding
+        // The padding property in CSS is used to generate space around an element's content, inside of any defined borders. Padding can be set for all four sides of an element (top, right, bottom, and left) using one to four values, respectively:
+        -- One value: Applies the same padding to all four sides.
+        padding: 10px; sets a 10px padding on all sides.
+        -- Two values: The first value applies to the top and bottom, the second to the left and right.
+        padding: 10px 20px; sets a 10px padding on the top and bottom, and 20px on the left and right.
+        -- Three values: The first value applies to the top, the second to the left and right, the third to the bottom.
+        padding: 10px 20px 30px; sets a 10px padding on the top, 20px on the left and right, and 30px on the bottom.
+        -- Four values: Applies to the top, right, bottom, and left, in that order.
+        padding: 10px 20px 30px 40px; sets a 10px padding on the top, 20px on the right, 30px on the bottom, and 40px on the left.
+    
+    -- Padding increases the size of the box unless the box-sizing is set to border-box, in which case it does not affect the overall dimensions of the element.
+    
+*/

@@ -1,0 +1,13 @@
+
+div {
+    border: 2px solid;
+    height: 75px;
+    /*overflow: visible;*/
+    /*overflow: hidden;*/
+    /*overflow: clip;
+    overflow-clip-margin: 9px; */
+    /* overflow: scroll; /* This creates a scrollbar and allows you to scroll through the overflowing excess words. Even when your words 
+                         are not overflowing, the scroll bar will still appear. */ 
+    overflow: auto; /* slightly different from overflow: scroll; in the sense that it will not show the scroll bar only if excess
+                         words are overflowing. */
+}

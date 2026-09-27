@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <h2>This is #1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, omnis officiis, autem totam aspernatur iusto consectetur sapiente voluptas est possimus voluptatem ipsum ea porro mollitia, cupiditate eveniet nostrum aliquid sint!</p>
+        </div>
+
+        <div class="box">
+            <h2>This is #2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, omnis officiis, autem totam aspernatur iusto consectetur sapiente voluptas est possimus voluptatem ipsum ea porro mollitia, cupiditate eveniet nostrum aliquid sint!</p>
+        </div>
+    </div> 
+
+</body>
+</html>
+
+<!--
+    The box-sizing CSS property changes how the width and height of an element are calculated. By default, elements use the content-box value for box-sizing, but changing this value can significantly affect layout and sizing in CSS. Let's dive deeper with examples to illustrate how box-sizing works.
+
+    Understanding the Default: content-box
+    With the default content-box model, the width and height you set on an element only apply to the element's content. Padding, borders, and margins are added to this base measurement, increasing the total size of the element. This can make it tricky to precisely control the overall dimensions of an element, especially when you're trying to fit elements within a specific layout.
+
+    Example:
+
+    css
+    Copy code
+    .box {
+        width: 100px;
+        padding: 10px;
+        border: 5px solid black;
+        margin: 10px;
+        box-sizing: content-box;
+    }
+    In this case, the total width of the .box element is not just 100px. It's 100px (width) + 20px (left and right padding) + 10px (left and right border), totaling 130px. Margins don't contribute to the element's dimensions but affect its positioning.
+
+    Switching to border-box
+    When you set box-sizing to border-box, the width and height you specify for an element include the content, padding, and border. This makes it much easier to size elements because the dimensions you set are the actual dimensions the element will occupy on the page, regardless of padding or borders.
+
+    Example:
+
+    css
+    Copy code
+    .box {
+        width: 100px;
+        padding: 10px;
+        border: 5px solid black;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+    With border-box, the total width of the .box element is exactly 100px, including the content, padding, and border. The 10px margin still affects positioning but not the size of the element itself.
+
+    Why border-box is Often Preferred
+    Simplifies Layouts: Using border-box simplifies the process of creating layouts because you can precisely control the size of elements. This is especially useful in responsive design and grid layouts, where you need elements to fit perfectly within specific columns or spaces.
+    Flexibility with Padding and Borders: You can freely adjust padding and borders without affecting the overall dimensions of an element. This is great for UI elements like buttons and input fields, where you might want to increase padding or add borders without changing the element's size.
+    Consistency: It helps in maintaining consistency across different elements and layouts, making it easier to predict how changes to padding or borders will affect the overall design.
+    Global Setting Example:
+    Many developers prefer to set box-sizing: border-box; globally to apply this behavior to all elements. This can be done using the universal selector *:
+
+    css
+    Copy code
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    This ensures that every element (including pseudo-elements) on the page uses the border-box model, providing a consistent and predictable sizing method throughout the stylesheet.
+
+    In summary, the choice between content-box and border-box affects how you calculate sizes and layout elements in your web designs. Switching to border-box can simplify these calculations and make your CSS more intuitive and easier to manage.
+
+-->

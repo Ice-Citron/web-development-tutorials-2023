@@ -1,0 +1,50 @@
+
+div {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+span {
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+/*
+
+    The CSS snippet you've provided defines styles for div and span elements. Here's a breakdown of each style rule:
+
+    div
+        background-color: red;: Sets the background color of the div elements to red.
+        width: 100px;: Sets the width of the div elements to 100 pixels.
+        height: 100px;: Sets the height of the div elements to 100 pixels.
+        display: inline-block;: Changes the display behavior of the div elements to inline-block, which allows them to sit next to each other horizontally, unlike the default block behavior of div elements that stack vertically. inline-block elements can have a width and height set, which is not the case for elements with display inline.
+        visibility: hidden;: Makes the div elements invisible, but they still occupy space in the layout.
+
+    span
+        background-color: aquamarine;: Sets the background color of the span elements to aquamarine.
+        width: 100px;: Sets the width of the span elements to 100 pixels.
+        height: 100px;: Sets the height of the span elements to 100 pixels.
+        display: inline-block;: Similar to the div elements, changes the span elements to display as inline-block, allowing them to be sized while sitting next to each other horizontally.
+
+    Notes on display Property
+        // The display CSS property specifies the display behavior (the type of rendering box) of an element. Here are some common values for display:
+        block: Elements render as a block, taking up the full width available and starting on a new line. Examples include div, p, and h1 elements.
+        inline: Elements do not start on a new line and only occupy as much width as necessary. span and a are examples of inline elements.
+        inline-block: Combines the layout properties of both inline and block elements. It flows with the document like an inline element, but can have width and height values, similar to a block element.
+        none: The element is completely removed from the document flow and does not take up any space. It is as if the element does not exist in the document.
+        flex: Enables a flexible box layout, providing a more efficient way to lay out, align, and distribute space among items in a container, even when their size is unknown.
+        grid: Enables a grid-based layout system, offering a more direct and layout-first approach than flexbox. It works well for two-dimensional layouts (rows and columns).
+
+    Notes on visibility Property
+        // The visibility CSS property controls the visibility of an element without affecting the layout of the document. Its values include:
+        visible: The default value. The element is visible.
+        hidden: The element is not visible, but it still takes up space in the layout.
+        collapse: Used primarily with table rows and columns. It makes them not visible and behaves like display: none (i.e., the space taken up by the row/column is also removed).
+        The key difference between display: none and visibility: hidden is that display: none removes the element from the document flow (thus, the element does not take up any space), whereas visibility: hidden hides the element but it still occupies space in the layout.
+
+*/
